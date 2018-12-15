@@ -11,19 +11,19 @@
 declare(strict_types = 1);
 namespace UaDisplaySize;
 
-final class Wxgaplus implements DisplayTypeInterface
+final class Custom720x1024 implements DisplayTypeInterface
 {
     use DisplayType;
 
-    public const TYPE = 'WXGA+';
+    public const TYPE = 'Custom 720x1024';
 
     /**
      * the display with
      */
-    private const WIDTH = 1440;
+    private const WIDTH = 1024;
 
     /**
      * the display height
      */
-    private const HEIGHT = 900;
+    private const HEIGHT = 720;
 }
