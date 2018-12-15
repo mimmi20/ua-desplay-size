@@ -25,5 +25,5 @@ final class Hvga implements DisplayTypeInterface
     /**
      * the display height
      */
-    private const HEIGHT = 360;
+    private const HEIGHT = 320;
 }
