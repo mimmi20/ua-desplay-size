@@ -11,10 +11,9 @@
 declare(strict_types = 1);
 namespace UaDisplaySize;
 
-use BrowserDetector\Loader\LoaderInterface;
 use BrowserDetector\Loader\NotFoundException;
 
-final class TypeLoader implements LoaderInterface
+final class TypeLoader implements TypeLoaderInterface
 {
     private const OPTIONS = [
         Cga::TYPE             => Cga::class,
