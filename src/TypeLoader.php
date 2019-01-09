@@ -206,8 +206,35 @@ final class TypeLoader implements TypeLoaderInterface
             throw new NotFoundException('the display type type with key "' . $key . '" was not found');
         }
 
-        $class = self::OPTIONS[$key];
+        $className = self::OPTIONS[$key];
 
-        return new $class();
+        return new $className();
+    }
+
+    /**
+     * @param int|null $height
+     * @param int|null $width
+     *
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
+     * @return \UaDisplaySize\DisplayTypeInterface
+     */
+    public function loadByDiemsions(?int $height, ?int $width): DisplayTypeInterface
+    {
+        $options = self::OPTIONS;
+        unset($options[Unknown::TYPE]);
+        $maxWidth  = max($height, $width);
+        $minHeight = min($height, $width);
+
+        foreach ($options as $key => $className) {
+            /** @var DisplayTypeInterface $class */
+            $class = new $className();
+
+            if ($minHeight === $class->getHeight() && $maxWidth === $class->getWidth()) {
+                return $this->load($key);
+            }
+        }
+
+        return $this->load(Unknown::TYPE);
     }
 }

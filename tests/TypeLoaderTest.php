@@ -12,6 +12,7 @@ declare(strict_types = 1);
 namespace UaDisplaySizeTest;
 
 use PHPUnit\Framework\TestCase;
+use UaDisplaySize\Hdwxga;
 use UaDisplaySize\TypeLoader;
 use UaDisplaySize\Unknown;
 
@@ -61,6 +62,7 @@ final class TypeLoaderTest extends TestCase
 
         self::assertInstanceOf(Unknown::class, $type);
         self::assertNull($type->getWidth());
+        self::assertNull($type->getHeight());
     }
 
     /**
@@ -72,5 +74,35 @@ final class TypeLoaderTest extends TestCase
         $this->expectExceptionMessage('the display type type with key "does not exist" was not found');
 
         $this->object->load('does not exist');
+    }
+
+    /**
+     * @return void
+     */
+    public function testLoadByDimensions(): void
+    {
+        $width  = 1280;
+        $height = 720;
+
+        $type = $this->object->loadByDiemsions($height, $width);
+
+        self::assertInstanceOf(Hdwxga::class, $type);
+        self::assertSame($width, $type->getWidth());
+        self::assertSame($height, $type->getHeight());
+    }
+
+    /**
+     * @return void
+     */
+    public function testLoadByUnknownDimensions(): void
+    {
+        $width  = 2;
+        $height = 1;
+
+        $type = $this->object->loadByDiemsions($height, $width);
+
+        self::assertInstanceOf(Unknown::class, $type);
+        self::assertNull($type->getWidth());
+        self::assertNull($type->getHeight());
     }
 }
