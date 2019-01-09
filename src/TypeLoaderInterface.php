@@ -23,4 +23,14 @@ interface TypeLoaderInterface extends LoaderInterface
      * @return \UaDisplaySize\DisplayTypeInterface
      */
     public function load(string $key): DisplayTypeInterface;
+
+    /**
+     * @param int|null $height
+     * @param int|null $width
+     *
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
+     * @return \UaDisplaySize\DisplayTypeInterface
+     */
+    public function loadByDiemsions(?int $height, ?int $width): DisplayTypeInterface;
 }
