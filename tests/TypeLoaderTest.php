@@ -38,6 +38,9 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     *
      * @return void
      */
     public function testHasUnknown(): void
@@ -46,6 +49,9 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     *
      * @return void
      */
     public function testHasNotWong(): void
@@ -54,6 +60,10 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadUnknown(): void
@@ -66,6 +76,8 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadNotAvailable(): void
@@ -77,6 +89,10 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadByDimensions(): void
@@ -92,6 +108,10 @@ final class TypeLoaderTest extends TestCase
     }
 
     /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     * @throws \BrowserDetector\Loader\NotFoundException
+     *
      * @return void
      */
     public function testLoadByUnknownDimensions(): void

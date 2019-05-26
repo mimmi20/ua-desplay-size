@@ -19,6 +19,9 @@ final class UnknownTest extends TestCase
     /**
      * tests the constructor and the getter
      *
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     *
      * @return void
      */
     public function testSetterGetter(): void

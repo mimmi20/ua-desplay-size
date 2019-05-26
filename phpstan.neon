@@ -10,9 +10,9 @@ parameters:
   excludes_analyse:
     - */tests/*/data/*
   ignoreErrors:
-    - '~Call to static method PHPUnit~'
-    - '~has parameter \$normalizers with default value~'
-    - '~Strict comparison using === between false and string will always evaluate to false~'
+    - '~has a nullable return type declaration~'
+    - '~has parameter \$height with a nullable type declaration~'
+    - '~has parameter \$width with a nullable type declaration~'
   exceptionRules:
     reportUnusedCatchesOfUncheckedExceptions: false
     uncheckedExceptions: []
