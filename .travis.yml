@@ -64,7 +64,7 @@ jobs:
         - composer self-update
       script: vendor/bin/phpunit --colors --columns 117 --coverage-clover=clover.xml --coverage-text
       after_success:
-        - wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar && php -n coveralls.phar --verbose --coverage_clover=clover.xml
+        - wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar && php -n php-coveralls.phar --verbose --coverage_clover=clover.xml
         - bash <(curl -s https://codecov.io/bash) -f clover.xml -F phpunit
 
     - stage: composer validate
