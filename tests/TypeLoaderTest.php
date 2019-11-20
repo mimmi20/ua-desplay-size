@@ -45,7 +45,7 @@ final class TypeLoaderTest extends TestCase
      */
     public function testHasUnknown(): void
     {
-        static::assertTrue($this->object->has('unknown'));
+        self::assertTrue($this->object->has('unknown'));
     }
 
     /**
@@ -56,7 +56,7 @@ final class TypeLoaderTest extends TestCase
      */
     public function testHasNotWong(): void
     {
-        static::assertFalse($this->object->has('does not exist'));
+        self::assertFalse($this->object->has('does not exist'));
     }
 
     /**
@@ -70,9 +70,9 @@ final class TypeLoaderTest extends TestCase
     {
         $type = $this->object->load('unknown');
 
-        static::assertInstanceOf(Unknown::class, $type);
-        static::assertNull($type->getWidth());
-        static::assertNull($type->getHeight());
+        self::assertInstanceOf(Unknown::class, $type);
+        self::assertNull($type->getWidth());
+        self::assertNull($type->getHeight());
     }
 
     /**
@@ -102,9 +102,9 @@ final class TypeLoaderTest extends TestCase
 
         $type = $this->object->loadByDiemsions($height, $width);
 
-        static::assertInstanceOf(Hdwxga::class, $type);
-        static::assertSame($width, $type->getWidth());
-        static::assertSame($height, $type->getHeight());
+        self::assertInstanceOf(Hdwxga::class, $type);
+        self::assertSame($width, $type->getWidth());
+        self::assertSame($height, $type->getHeight());
     }
 
     /**
@@ -121,8 +121,8 @@ final class TypeLoaderTest extends TestCase
 
         $type = $this->object->loadByDiemsions($height, $width);
 
-        static::assertInstanceOf(Unknown::class, $type);
-        static::assertNull($type->getWidth());
-        static::assertNull($type->getHeight());
+        self::assertInstanceOf(Unknown::class, $type);
+        self::assertNull($type->getWidth());
+        self::assertNull($type->getHeight());
     }
 }
