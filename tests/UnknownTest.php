@@ -30,8 +30,8 @@ final class UnknownTest extends TestCase
 
         $result = new Unknown();
 
-        static::assertSame($type, $result->getType());
-        static::assertNull($result->getWidth());
-        static::assertNull($result->getHeight());
+        self::assertSame($type, $result->getType());
+        self::assertNull($result->getWidth());
+        self::assertNull($result->getHeight());
     }
 }
