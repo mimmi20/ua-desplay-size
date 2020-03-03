@@ -100,7 +100,7 @@ final class TypeLoaderTest extends TestCase
         $width  = 1280;
         $height = 720;
 
-        $type = $this->object->loadByDiemsions($height, $width);
+        $type = $this->object->loadByDimensions($height, $width);
 
         self::assertInstanceOf(Hdwxga::class, $type);
         self::assertSame($width, $type->getWidth());
@@ -119,7 +119,7 @@ final class TypeLoaderTest extends TestCase
         $width  = 2;
         $height = 1;
 
-        $type = $this->object->loadByDiemsions($height, $width);
+        $type = $this->object->loadByDimensions($height, $width);
 
         self::assertInstanceOf(Unknown::class, $type);
         self::assertNull($type->getWidth());

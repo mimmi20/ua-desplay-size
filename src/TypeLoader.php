@@ -61,6 +61,7 @@ final class TypeLoader implements TypeLoaderInterface
         Custom200x640::TYPE => Custom200x640::class,
         Custom208x208::TYPE => Custom208x208::class,
         Custom208x320::TYPE => Custom208x320::class,
+        Custom220x220::TYPE => Custom220x220::class,
         Custom240x240::TYPE => Custom240x240::class,
         Custom240x260::TYPE => Custom240x260::class,
         Custom240x269::TYPE => Custom240x269::class,
@@ -285,7 +286,7 @@ final class TypeLoader implements TypeLoaderInterface
      *
      * @return \UaDisplaySize\DisplayTypeInterface
      */
-    public function loadByDiemsions(?int $height, ?int $width): DisplayTypeInterface
+    public function loadByDimensions(?int $height, ?int $width): DisplayTypeInterface
     {
         $options = self::OPTIONS;
         unset($options[Unknown::TYPE]);
