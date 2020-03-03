@@ -32,5 +32,5 @@ interface TypeLoaderInterface extends LoaderInterface
      *
      * @return \UaDisplaySize\DisplayTypeInterface
      */
-    public function loadByDiemsions(?int $height, ?int $width): DisplayTypeInterface;
+    public function loadByDimensions(?int $height, ?int $width): DisplayTypeInterface;
 }
