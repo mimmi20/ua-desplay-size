@@ -17,6 +17,7 @@ final class TypeLoader implements TypeLoaderInterface
 {
     private const OPTIONS = [
         Cga::TYPE => Cga::class,
+        Custom40x90::TYPE => Custom40x90::class,
         Custom48x84::TYPE => Custom48x84::class,
         Custom48x100::TYPE => Custom48x100::class,
         Custom60x96::TYPE => Custom60x96::class,
