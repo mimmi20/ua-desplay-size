@@ -21,9 +21,7 @@ use UaDisplaySize\Unknown;
  */
 final class TypeLoaderTest extends TestCase
 {
-    /**
-     * @var \UaDisplaySize\TypeLoader
-     */
+    /** @var \UaDisplaySize\TypeLoader */
     private $object;
 
     /**

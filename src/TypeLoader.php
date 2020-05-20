@@ -315,8 +315,8 @@ final class TypeLoader implements TypeLoaderInterface
         $minHeight = min($height, $width);
 
         foreach ($options as $key => $className) {
-            /** @var DisplayTypeInterface $class */
             $class = new $className();
+            \assert($class instanceof DisplayTypeInterface);
 
             if ($minHeight === $class->getHeight() && $maxWidth === $class->getWidth()) {
                 return $this->load($key);
