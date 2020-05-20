@@ -11,12 +11,6 @@
 declare(strict_types = 1);
 namespace UaDisplaySize;
 
-/**
- * @category  BrowserDetector
- *
- * @copyright 2012-2017 Thomas Mueller
- * @license   http://www.opensource.org/licenses/MIT MIT License
- */
 interface DisplayTypeInterface
 {
     /**
