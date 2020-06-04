@@ -130,6 +130,7 @@ final class TypeLoader implements TypeLoaderInterface
         Custom720x1200::TYPE => Custom720x1200::class,
         Custom720x1440::TYPE => Custom720x1440::class,
         Custom720x1480::TYPE => Custom720x1480::class,
+        Custom720x1498::TYPE => Custom720x1498::class,
         Custom720x1500::TYPE => Custom720x1500::class,
         Custom720x1512::TYPE => Custom720x1512::class,
         Custom720x1520::TYPE => Custom720x1520::class,
