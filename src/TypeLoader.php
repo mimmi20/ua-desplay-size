@@ -51,6 +51,7 @@ final class TypeLoader implements TypeLoaderInterface
         Custom120x120::TYPE => Custom120x120::class,
         Custom120x128::TYPE => Custom120x128::class,
         Custom120x130::TYPE => Custom120x130::class,
+        Custom120x133::TYPE => Custom120x133::class,
         Custom120x144::TYPE => Custom120x144::class,
         Custom128x128::TYPE => Custom128x128::class,
         Custom128x132::TYPE => Custom128x132::class,
