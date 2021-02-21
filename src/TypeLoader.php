@@ -228,6 +228,7 @@ final class TypeLoader implements TypeLoaderInterface
         Custom2000x3000::TYPE => Custom2000x3000::class,
         Custom2048x2732::TYPE => Custom2048x2732::class,
         Custom2048x2736::TYPE => Custom2048x2736::class,
+        Custom2200x2480::TYPE => Custom2200x2480::class,
         Custom3000x4500::TYPE => Custom3000x4500::class,
         Dci2k::TYPE => Dci2k::class,
         Dci4k::TYPE => Dci4k::class,
